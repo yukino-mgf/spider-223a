@@ -1,5 +1,8 @@
 import os
 import re
+import requests
 
-word = "https://example.com/file/123234"
-out = re.search(word,"example")
+url = "https://copymanga.com"
+response = requests.get(url)
+with open("sample.html","wb") as f:
+    f.write(response.content)
